@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { SectionTitle } from "@/components/section-title";
 import {
+  aiDeliveryFocus,
+  aiHomeHighlights,
+  aiPipelineStages,
   companyStats,
   contactCards,
   homeReasons,
@@ -19,28 +22,27 @@ export default function HomePage() {
             <div className="w-full px-4 lg:w-7/12">
               <div className="mx-auto max-w-[720px] lg:mx-0">
                 <span className="mb-4 inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
-                  Discover. Build. Accelerate.
+                  AI Consulting. Product Development. Intelligent Systems.
                 </span>
                 <h1 className="mb-5 text-3xl font-bold leading-tight text-black sm:text-4xl md:text-5xl md:leading-tight">
-                  Modern IT delivery for companies that need momentum, not overhead.
+                  AI consulting and product development for teams that need real systems, not demos.
                 </h1>
                 <p className="mb-12 text-base leading-relaxed text-body-color sm:text-lg md:text-xl">
-                  Lead your business toward a stronger digital future by modernizing and integrating mainstream IT operations across data, cloud, QA, analytics, and web applications.
+                  We design and ship intelligent RAG pipelines, A2A agent workflows, and MCP integrations that connect your data, tools, and users into usable products.
                 </p>
                 <div className="flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80" href="/contact">
-                    Book a Consultation
+                    Discuss an AI Project
                   </Link>
                   <Link className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90" href="/services">
-                    Explore Services
+                    Explore AI Services
                   </Link>
                 </div>
                 <div className="mt-10 flex flex-wrap gap-3">
-                  {companyStats.slice(0, 3).map((stat) => (
-                    <div className="rounded-xs border border-stroke-stroke bg-white px-5 py-4 shadow-one" key={stat.label}>
-                      <div className="text-xs uppercase tracking-[0.2em] text-body-color">{stat.label}</div>
-                      <div className="mt-2 text-lg font-semibold text-black">{stat.value}</div>
-                    </div>
+                  {technologyTags.map((item) => (
+                    <span className="rounded-full border border-stroke-stroke bg-white px-4 py-2 text-sm font-medium text-body-color shadow-one" key={item}>
+                      {item}
+                    </span>
                   ))}
                 </div>
               </div>
@@ -48,13 +50,9 @@ export default function HomePage() {
             <div className="w-full px-4 lg:w-5/12">
               <div className="relative mx-auto mt-12 max-w-[500px] lg:mt-0">
                 <div className="rounded-xs bg-white p-8 shadow-three">
-                  <SectionTitle
-                    mb="36px"
-                    paragraph="Focused delivery capabilities aligned with the public IT Shoulders offer."
-                    title="Delivery Snapshot"
-                  />
+                  <SectionTitle mb="36px" paragraph="A practical AI delivery stack that turns strategy into production workflows." title="Delivery Snapshot" />
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                    {serviceHighlights.map((service) => (
+                    {aiHomeHighlights.map((service) => (
                       <article className="rounded-xs border border-stroke-stroke bg-gray-light px-5 py-4" key={service.title}>
                         <h3 className="mb-2 text-base font-semibold text-black">{service.title}</h3>
                         <p className="text-sm leading-relaxed text-body-color">{service.summary}</p>
@@ -84,13 +82,93 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="bg-gray-light py-16 md:py-20 lg:py-28">
+        <div className="container">
+          <SectionTitle
+            center
+            paragraph="We pair AI consulting with product delivery so the system can move from a useful idea to something your team actually uses."
+            title="AI Consulting & Product Development"
+          />
+          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+            {aiHomeHighlights.map((item, index) => (
+              <article className="rounded-xs bg-white p-8 shadow-three" key={item.title}>
+                <span className="mb-6 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mb-4 text-xl font-bold text-black">{item.title}</h3>
+                <p className="text-base leading-relaxed text-body-color">{item.summary}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 rounded-xs bg-white p-8 shadow-three">
+            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+              <div>
+                <h3 className="mb-4 text-2xl font-bold text-black">What this looks like in practice</h3>
+                <p className="text-base leading-relaxed text-body-color">
+                  We start with a business case, then design the retrieval layer, agent orchestration, and tool connections that make the product reliable enough for daily use.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                {aiDeliveryFocus.map((item) => (
+                  <div className="rounded-xs border border-stroke-stroke bg-gray-light px-4 py-3 text-sm font-medium text-black" key={item}>
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 md:py-20 lg:py-28">
+        <div className="container">
+          <SectionTitle
+            center
+            paragraph="Intelligent RAG needs more than retrieval. The flow below keeps knowledge, prompts, tools, and evaluation tied together."
+            title="Intelligent RAG pipeline built for grounded answers"
+          />
+          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+            {aiPipelineStages.map((step, index) => (
+              <article className="rounded-xs bg-white p-8 shadow-three" key={step.title}>
+                <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3 className="mb-4 text-xl font-bold text-black">{step.title}</h3>
+                <p className="text-base leading-relaxed text-body-color">{step.summary}</p>
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+            <article className="rounded-xs border border-stroke-stroke bg-gray-light px-6 py-5">
+              <h3 className="mb-2 text-lg font-semibold text-black">A2A coordination</h3>
+              <p className="text-sm leading-relaxed text-body-color">
+                Split planning, research, verification, and action across specialized agents with clear handoffs.
+              </p>
+            </article>
+            <article className="rounded-xs border border-stroke-stroke bg-gray-light px-6 py-5">
+              <h3 className="mb-2 text-lg font-semibold text-black">MCP integration</h3>
+              <p className="text-sm leading-relaxed text-body-color">
+                Connect models to tools, data, and workflows through a consistent protocol instead of brittle one-off integrations.
+              </p>
+            </article>
+            <article className="rounded-xs border border-stroke-stroke bg-gray-light px-6 py-5">
+              <h3 className="mb-2 text-lg font-semibold text-black">Production readiness</h3>
+              <p className="text-sm leading-relaxed text-body-color">
+                Add evaluation, observability, and guardrails so the system remains useful after the first launch.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gray-light py-10">
         <div className="container">
           <div className="flex flex-wrap items-center justify-center gap-3">
-            {technologyTags.map((item) => (
-              <span className="rounded-full border border-stroke-stroke bg-white px-4 py-2 text-sm font-medium text-body-color shadow-one" key={item}>
-                {item}
-              </span>
+            {companyStats.slice(0, 3).map((stat) => (
+              <div className="rounded-xs border border-stroke-stroke bg-white px-5 py-4 shadow-one" key={stat.label}>
+                <div className="text-xs uppercase tracking-[0.2em] text-body-color">{stat.label}</div>
+                <div className="mt-2 text-lg font-semibold text-black">{stat.value}</div>
+              </div>
             ))}
           </div>
         </div>
@@ -100,7 +178,7 @@ export default function HomePage() {
         <div className="container">
           <SectionTitle
             center
-            paragraph="The original site emphasizes experience, agility, customer focus, and quality. This section keeps those themes but presents them with the Startup template’s structure."
+            paragraph="The original site emphasizes experience, agility, customer focus, and quality. This section keeps those themes but presents them with the Startup template's structure."
             title="Data-driven companies choose IT Shoulders to move faster with less friction."
           />
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
@@ -159,7 +237,7 @@ export default function HomePage() {
         <div className="container">
           <SectionTitle
             center
-            paragraph="The existing message is strong and simple: listen, develop, test, measure, refine. The theme’s feature grid works well for turning that into a clearer delivery framework."
+            paragraph="The existing message is strong and simple: listen, develop, test, measure, refine. The theme's feature grid works well for turning that into a clearer delivery framework."
             title="Small teams. Short loops. Direct communication."
           />
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">

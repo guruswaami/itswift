@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     template: "%s | IT Shoulders"
   },
   description:
-    "IT Shoulders modernizes data, cloud, QA, and web operations with practical consulting and delivery support.",
+    "IT Shoulders modernizes data, cloud, QA, web, and AI operations with practical consulting and delivery support.",
   openGraph: {
     title: "IT Shoulders | Digital Uplifter",
     description:
-      "Discover, build, and accelerate with data, cloud, analytics, QA, and application delivery services.",
+      "Discover, build, and accelerate with data, cloud, analytics, QA, AI consulting, and application delivery services.",
     type: "website",
     siteName: "IT Shoulders"
   }

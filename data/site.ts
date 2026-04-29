@@ -7,14 +7,14 @@ export const navigation = [
 ];
 
 export const technologyTags = [
-  "Talend Data Fabric",
-  "Database",
-  "Analytics",
-  "SaaS",
-  "QA",
-  "Cloud",
-  "Big Data",
-  "Web"
+  "AI Consulting",
+  "Product Development",
+  "Intelligent RAG",
+  "A2A Workflows",
+  "MCP Integrations",
+  "LLM Apps",
+  "Vector Search",
+  "Workflow Automation"
 ];
 
 export const serviceHighlights = [
@@ -34,6 +34,59 @@ export const serviceHighlights = [
     title: "Web Applications",
     summary: "Build and support business-critical platforms with practical delivery rigor."
   }
+];
+
+export const aiHomeHighlights = [
+  {
+    title: "AI Consulting & Product Development",
+    summary:
+      "Shape the product vision, solution architecture, and release plan for AI systems that solve a real business problem."
+  },
+  {
+    title: "Intelligent RAG Pipelines",
+    summary:
+      "Build retrieval pipelines with curated knowledge, vector search, grounding, and evaluation so answers stay useful and traceable."
+  },
+  {
+    title: "A2A Agent Workflows",
+    summary:
+      "Design agent-to-agent workflows that split planning, research, validation, and action across cooperating specialists."
+  },
+  {
+    title: "MCP Tooling",
+    summary:
+      "Expose tools, data, and actions through Model Context Protocol integrations that keep copilots connected to your systems."
+  }
+];
+
+export const aiPipelineStages = [
+  {
+    title: "Discover",
+    summary:
+      "Identify the highest-value use cases, target users, source data, and guardrails before any model work begins."
+  },
+  {
+    title: "Ground",
+    summary:
+      "Prepare documents, indexes, prompts, and evaluation sets so the system can retrieve and reason against trusted context."
+  },
+  {
+    title: "Orchestrate",
+    summary:
+      "Coordinate A2A agents and MCP-connected tools so each step has a clear job and a controlled interface."
+  },
+  {
+    title: "Deploy",
+    summary:
+      "Ship the product, monitor quality, and improve the experience with usage signals and feedback."
+  }
+];
+
+export const aiDeliveryFocus = [
+  "Strategy and roadmap design",
+  "RAG architecture and evaluation",
+  "Agent orchestration and tool access",
+  "Product prototypes and MVP delivery"
 ];
 
 export const companyStats = [
