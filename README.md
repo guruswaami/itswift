@@ -33,11 +33,12 @@ npm run build
 
 Because this project uses `output: 'export'`, the static site is generated in the `out/` directory.
 
-## Start production server
+## Preview static build
 
-Run the production server locally:
+Build the static site, then preview the exported files locally:
 
 ```bash
+npm run build
 npm run start
 ```
 
@@ -57,13 +58,13 @@ npm run deploy
 The deploy script publishes the contents of `out/` using:
 
 ```bash
-gh-pages -d out
+gh-pages -d out -t
 ```
 
 ## Available scripts
 
 - `npm run dev` - start the local development server
 - `npm run build` - create the production build and static export
-- `npm run start` - run the production server
+- `npm run start` - preview the exported `out/` directory
 - `npm run predeploy` - run the build before deployment
 - `npm run deploy` - publish the `out/` directory to GitHub Pages
