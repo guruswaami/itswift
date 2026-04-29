@@ -16,7 +16,7 @@ import {
 export default function HomePage() {
   return (
     <>
-      <section className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px]">
+      <section className="relative z-10 overflow-hidden bg-white pb-12 pt-[104px] md:pb-[80px] md:pt-[130px] xl:pb-[120px] xl:pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-7/12">
@@ -82,14 +82,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gray-light py-16 md:py-20 lg:py-28">
+      <section className="bg-gray-light py-12 md:py-16 lg:py-20">
         <div className="container">
           <SectionTitle
             center
+            mb="72px"
             paragraph="We pair AI consulting with product delivery so the system can move from a useful idea to something your team actually uses."
             title="AI Consulting & Product Development"
           />
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
             {aiHomeHighlights.map((item, index) => (
               <article className="rounded-xs bg-white p-8 shadow-three" key={item.title}>
                 <span className="mb-6 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -100,7 +101,7 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <div className="mt-10 rounded-xs bg-white p-8 shadow-three">
+          <div className="mt-8 rounded-xs bg-white p-8 shadow-three">
             <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
               <div>
                 <h3 className="mb-4 text-2xl font-bold text-black">What this looks like in practice</h3>
@@ -120,14 +121,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-28">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="container">
           <SectionTitle
             center
+            mb="72px"
             paragraph="Intelligent RAG needs more than retrieval. The flow below keeps knowledge, prompts, tools, and evaluation tied together."
             title="Intelligent RAG pipeline built for grounded answers"
           />
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
             {aiPipelineStages.map((step, index) => (
               <article className="rounded-xs bg-white p-8 shadow-three" key={step.title}>
                 <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -138,7 +140,7 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">
             <article className="rounded-xs border border-stroke-stroke bg-gray-light px-6 py-5">
               <h3 className="mb-2 text-lg font-semibold text-black">A2A coordination</h3>
               <p className="text-sm leading-relaxed text-body-color">
@@ -161,7 +163,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-gray-light py-10">
+      <section className="bg-gray-light py-8">
         <div className="container">
           <div className="flex flex-wrap items-center justify-center gap-3">
             {companyStats.slice(0, 3).map((stat) => (
@@ -174,14 +176,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-28">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="container">
           <SectionTitle
             center
+            mb="72px"
             paragraph="The original site emphasizes experience, agility, customer focus, and quality. This section keeps those themes but presents them with the Startup template's structure."
             title="Data-driven companies choose IT Shoulders to move faster with less friction."
           />
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
             {homeReasons.map((reason, index) => (
               <article className="rounded-xs bg-white p-8 shadow-three" key={reason.title}>
                 <span className="mb-6 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -195,9 +198,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="pt-4 md:pt-8 lg:pt-12">
+      <section className="pt-2 md:pt-6 lg:pt-8">
         <div className="container">
-          <div className="border-b border-body-color/[.15] pb-16 md:pb-20 lg:pb-28">
+          <div className="border-b border-body-color/[.15] pb-12 md:pb-16 lg:pb-20">
             <div className="-mx-4 flex flex-wrap items-center">
               <div className="w-full px-4 lg:w-1/2">
                 <SectionTitle
@@ -233,14 +236,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-16 md:py-20 lg:py-28">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="container">
           <SectionTitle
             center
+            mb="72px"
             paragraph="The existing message is strong and simple: listen, develop, test, measure, refine. The theme's feature grid works well for turning that into a clearer delivery framework."
             title="Small teams. Short loops. Direct communication."
           />
-          <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
             {processSteps.map((step, index) => (
               <article className="rounded-xs bg-white p-8 shadow-three" key={step.title}>
                 <span className="mb-4 inline-block text-sm font-semibold uppercase tracking-[0.2em] text-primary">
@@ -254,7 +258,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="overflow-hidden pb-16 md:pb-20 lg:pb-28">
+      <section className="overflow-hidden pb-12 md:pb-16 lg:pb-20">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
